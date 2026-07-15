@@ -156,7 +156,6 @@ When deploying, add your MongoDB connection string as an environment variable on
 - Connecting Node.js to MongoDB using Mongoose
 - Managing frontend state in React
 - Using environment variables safely
-- Pushing a project to GitHub without exposing secrets
 
 ## Author
 
