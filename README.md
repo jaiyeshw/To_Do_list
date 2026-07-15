@@ -1,4 +1,8 @@
-# MERN To-Do List App
+# To-Do List App
+
+This repository contains a MERN To-Do List website and the original Python command-line version.
+
+## MERN Version
 
 A full-stack to-do list app using:
 
@@ -7,7 +11,7 @@ A full-stack to-do list app using:
 - React
 - Node.js
 
-## Features
+### Features
 
 - Add tasks
 - View all tasks
@@ -15,36 +19,25 @@ A full-stack to-do list app using:
 - Mark tasks as complete
 - Clean responsive website UI
 
-## Local Setup
+### Local Setup
 
-### 1. Setup MongoDB
-
-Create a free MongoDB Atlas database and copy your connection string.
-
-### 2. Setup Server
+Server:
 
 ```bash
 cd server
 npm install
 copy .env.example .env
+npm run dev
 ```
 
-Put your MongoDB connection string inside `.env`:
+Put your MongoDB connection string inside `server/.env`:
 
 ```env
 MONGODB_URI=your_mongodb_connection_string
 PORT=5000
 ```
 
-Run the server:
-
-```bash
-npm run dev
-```
-
-### 3. Setup Client
-
-Open another terminal:
+Client:
 
 ```bash
 cd client
@@ -58,73 +51,39 @@ The React app will run at:
 http://localhost:5173
 ```
 
-For local development, the app uses:
-
-```env
-VITE_API_URL=http://localhost:5000/api/tasks
-```
-
 Do not upload real `.env` files to GitHub.
 
-## Before Pushing To GitHub
+## Python Version
 
-Commit these files:
+A simple command-line To-Do List app built with Python.
 
-- `client`
-- `server`
-- `.gitignore`
-- `README.md`
-- `server/.env.example`
-- `client/.env.example`
-- `package-lock.json` files
+### Python Features
 
-Do not commit these:
+- Add new tasks
+- View all tasks
+- Delete tasks
+- Mark tasks as complete
+- Menu-based interface
+- Basic input validation using `try/except`
 
-- `.env`
-- `node_modules`
-- `dist`
-- real passwords or MongoDB connection strings
-
-If a MongoDB password was ever shared publicly, reset it in MongoDB Atlas before deploying.
-
-## Local Setup Commands
-
-Server:
+### Run Python App
 
 ```bash
-cd server
-npm install
-npm run dev
-```
-
-Client:
-
-```bash
-cd client
-npm install
-npm run dev
+python to_do_list.py
 ```
 
 ## Deploy
 
-### Backend
+Deploy the `server` folder on Render and the `client` folder on Vercel.
 
-Deploy the `server` folder on Render.
-
-Add this environment variable on Render:
+Backend environment variable:
 
 ```env
 MONGODB_URI=your_mongodb_connection_string
 ```
 
-### Frontend
-
-Deploy the `client` folder on Vercel.
-
-Add this environment variable on Vercel:
+Frontend environment variable:
 
 ```env
 VITE_API_URL=https://your-render-backend-url.onrender.com/api/tasks
 ```
-
-Then rebuild the frontend.
