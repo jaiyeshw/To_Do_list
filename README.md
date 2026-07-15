@@ -70,7 +70,6 @@ MONGODB_URI=your_mongodb_connection_string
 PORT=5000
 ```
 
-Do not upload your real `.env` file to GitHub.
 
 For frontend deployment, use:
 
